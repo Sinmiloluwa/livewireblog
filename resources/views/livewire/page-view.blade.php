@@ -2,7 +2,7 @@
     @section('content')
         <div class="container mx-auto flex flex-col items-center max-w-screen-lg">
             @foreach($post->sections as $category)
-                <a href="#" class="text-center text-[#fa9706] mb-6">{{ $category->name }}</a>
+                <a href="{{url('/category/'.$category->slug)}}" class="text-center text-[#fa9706] mb-6">{{ $category->name }}</a>
             @endforeach
 
             <h3 class="font-bold text-white text-5xl text-center">{{ $post->title }}</h3>
